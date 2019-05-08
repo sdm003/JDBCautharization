@@ -19,7 +19,8 @@ public class SecureConfig extends WebSecurityConfigurerAdapter {
     DataSource dataSource;
 @Override
     protected void configure(HttpSecurity http) throws  Exception{
-    http.csrf().disable().httpBasic().and().authorizeRequests().anyRequest().authenticated();
+    http.csrf().disable().httpBasic().and().authorizeRequests().antMatchers("/admin").hasRole("ADMIN").antMatchers("/user").permitAll();
+
 
 }
 @Autowired

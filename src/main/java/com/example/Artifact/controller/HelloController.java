@@ -11,6 +11,12 @@ public class HelloController {
 
     @GetMapping("/admin")
     @ResponseBody
-    public Hello addSomething(){ return  new Hello("Ave, Cesar!");}
+    public Hello addSomething(){ return  new Hello("Ave, Cesar!");
 
-}
+
+    }
+    @GetMapping("/user")
+    @ResponseBody
+    public Hello addSomethingPrimitive(){ return  new Hello("Zdorovo))))");
+
+}}
